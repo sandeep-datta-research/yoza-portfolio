@@ -1,26 +1,25 @@
 # Yoza — Artist Portfolio
 
-An editorial-style artist portfolio built with React, Vite, React Router and Framer Motion.
+A responsive editorial-style artist portfolio with a warm ivory palette, serif typography, artwork category filters, fullscreen gallery viewer, About, Commissions and Contact sections.
 
-## Getting started
+## Run locally
+This version is a static site; no build step is required. Open `index.html` in a browser or use a local server:
+
 ```bash
-npm install
-npm run dev
+python -m http.server 8000
 ```
-
-## Production
-```bash
-npm run build
-npm run preview
-```
-
-## Customize
-- Replace sample artwork URLs and metadata in `src/data/artworks.js`.
-- Update the artist name, biography and social links in `src/components/Navbar.jsx`, `src/components/Footer.jsx` and `src/pages/About.jsx`.
-- Set the contact email in `src/pages/Contact.jsx`.
-- Contact form uses a mailto fallback and requires no backend.
 
 ## Deploy
-For GitHub Pages, set the Vite `base` in `vite.config.js` to `/yoza-portfolio/`, install `gh-pages`, and add deploy scripts. For a custom domain or Vercel/Netlify, the default base `/` is suitable.
+A GitHub Actions workflow in `.github/workflows/pages.yml` publishes the site to GitHub Pages whenever `main` is updated.
 
-The portfolio uses remote Unsplash demo images. Replace these with your own optimized WebP/AVIF artwork before publishing.
+After the first workflow run, check **Settings → Pages** and ensure the publishing source is set to **GitHub Actions**. The expected project URL is:
+
+https://sandeep-datta-research.github.io/yoza-portfolio/
+
+## Before sharing publicly
+- Replace the sample Unsplash images in `index.html` with Yoza's own artwork.
+- Replace `hello@example.com` with the real contact email (it appears in the contact section and form mailto handler).
+- Replace the Instagram placeholder with the artist's actual profile.
+- Update the biography and service descriptions to match the artist.
+
+The contact form opens the visitor's default email application; it does not store or transmit form submissions to a server.
